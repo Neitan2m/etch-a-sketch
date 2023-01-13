@@ -8,22 +8,29 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header class="header">
+    <h1 class="title">SketchPad</h1>
+</header>
    <div class="flex-container">
-    <div class="title"><h1>SketchPad</h1></div>
     <div class="content">
         <div class="board"></div>
-        <div class="buttons">
-        <button id="blackBtn">Black</button>
-        <button id="whiteBtn">White</button>
-        <button id="rainbowBtn">Rainbow</button>
-        <button id="clearBtn">Clear</button>
+        <div class="buttons" id="settings">
+            <input id="colorPicker" type="color" value="#333333">
+        <button onclick = "changeColor('black')" id="blackBtn">Black</button>
+        <button onclick = "changeColor('white')" id="whiteBtn">Erasor</button>
+        <button onclick = "changeColor('random')" id="rainbowBtn">Rainbow</button>
+        <button onclick = "resetBoard()" id="clearBtn">Clear</button>
         </div>
         <input type="text" placeholder="Size of board" value="0" onchange = changeSize(this.value)>
         <button>Set Size</button>
     </div>
+    <div class ="mode">Mode: coloring</div>
    </div>
-
-
+   <footer>
+    <p>Copyright © <script>document.write(new Date ().getFullYear ())</script>
+        Neitan3
+    </p>
+</footer>
     <script src="index.js"></script>
 </body>
 </html>
